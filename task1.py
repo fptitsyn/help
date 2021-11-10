@@ -1,57 +1,61 @@
-n, i, m, g, gg = 0, 0, 0, 0, 0
+# !/usr/bin/env python3
+# -*- encoding: utf-8 -*-
 
-n = int(input())
+if __name__ == "__main__":
+    n, i, m, g, gg = 0, 0, 0, 0, 0
 
-if n > 1983:
-    while n > 1983:
-        n -= 60
-        m = n - 1923
-else:
-    while n < 1983:
-        n += 60
-        m = n - 1983
+    n = int(input())
 
-g = (m // 12) + 1
-gg = m % 12
+    if n > 1983:
+        while n > 1983:
+            n -= 60
+            m = n - 1923
+    else:
+        while n < 1983:
+            n += 60
+            m = n - 1983
 
-result = ''
+    g = (m // 12) + 1
+    gg = m % 12
 
-if g == 1:
-    result = 'зеленой'
-elif g == 2:
-    result = 'красной'
-elif g == 3:
-    result = 'желтой'
-elif g == 4:
-    result = 'белой'
-elif g == 5:
-    result = 'черной'
-elif g == 6:
-    result = 'черной'
+    result = ''
 
-if gg == 1:
-    result += 'крысы'
-elif gg == 2:
-    result += 'коровы'
-elif gg == 3:
-    result += ' тигра'
-elif gg == 4:
-    result += ' зайца'
-elif gg == 5:
-    result += ' дракона'
-elif gg == 6:
-    result += ' змеи'
-elif gg == 7:
-    result += ' лошади'
-elif gg == 8:
-    result += ' овцы'
-elif gg == 9:
-    result += ' обезьяны'
-elif gg == 10:
-    result += ' курицы'
-elif gg == 11:
-    result += ' собаки'
-elif gg == 0:
-    result += ' свиньи'
+    if g == 1:
+        result = 'зеленой'
+    elif g == 2:
+        result = 'красной'
+    elif g == 3:
+        result = 'желтой'
+    elif g == 4:
+        result = 'белой'
+    elif g == 5:
+        result = 'черной'
+    elif g == 6:
+        result = 'черной'
 
-print(result)
+    if gg == 1:
+        result += 'крысы'
+    elif gg == 2:
+        result += 'коровы'
+    elif gg == 3:
+        result += ' тигра'
+    elif gg == 4:
+        result += ' зайца'
+    elif gg == 5:
+        result += ' дракона'
+    elif gg == 6:
+        result += ' змеи'
+    elif gg == 7:
+        result += ' лошади'
+    elif gg == 8:
+        result += ' овцы'
+    elif gg == 9:
+        result += ' обезьяны'
+    elif gg == 10:
+        result += ' курицы'
+    elif gg == 11:
+        result += ' собаки'
+    elif gg == 0:
+        result += ' свиньи'
+
+    print(result)
